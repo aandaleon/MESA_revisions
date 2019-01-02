@@ -1,2 +1,2 @@
 # MESA_revisions
-Scripts used for https://www.biorxiv.org/content/early/2018/05/31/245761
+Scripts used for [Genetic architecture of gene expression traits across diverse populations](https://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1007586)
