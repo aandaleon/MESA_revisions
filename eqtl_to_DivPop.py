@@ -18,7 +18,7 @@ for pop in combined_pops:
         meqtl = pd.read_csv(pop + "_Nk_10_PFs_chr" + str(chr) + "pcs_3.meqtl.cis.2018-05-12.txt", delim_whitespace = True) #snps    gene    statistic       pvalue  FDR     beta
         meqtl = meqtl.loc[meqtl['pvalue'] <= 1e-8] #sig cutoff for snp = 1e-8
         DivPop = pd.concat([DivPop, meqtl]) #add to overall pop
-        print("Completed with " + pop + ", chr. " + chr + ".")
+        print("Completed with " + pop + ", chr. " + str(chr) + ".")
     DivPop = DivPop.reset_index(drop = True) #to prevent multiple occurrances of the same index
     DivPop['gene'] = DivPop['gene'].str.replace("\.[^.]*$", "") #remove decimal and after in gene - https://stackoverflow.com/questions/19710898/regex-to-remove-everything-after-the-last-dot-in-a-file
     DivPop = DivPop.merge(gene_anno, on = "gene") #add gene data
